@@ -1,0 +1,115 @@
+{% extends 'myparent.html' %}
+{% load static %}
+{% block title%}
+Cart Page:: Shopping site
+
+{% endblock %}
+
+{% block content %}
+
+<!-- breadcrumb -->
+	<div class="container mt-5" >
+		<div class="bread-crumb flex-w p-l-25 p-r-15 p-t-30 p-lr-0-lg">
+			<a href="index.html" class="stext-109 cl8 hov-cl1 trans-04">
+				Home
+				<i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
+			</a>
+
+			<span class="stext-109 cl4">
+				Shoping Cart
+			</span>
+		</div>
+	</div>
+
+
+<!-- Shoping Cart -->
+	<form class="bg0 p-t-75 p-b-85">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-10 col-xl-7 m-lr-auto m-b-50">
+					<div class="m-l-25 m-r--38 m-lr-0-xl">
+						<div class="wrap-table-shopping-cart">
+
+                            {% if orders_data %}
+							  <table class="table-shopping-cart">
+
+								<tr class="table_head">
+
+									<th class="column-1">ProductId</th>
+									<th class="column-2">Image</th>
+									<th class="column-3">Price</th>
+
+									<th class="column-4">Qty</th>
+									<th class="column-5">Total Cost</th>
+
+								</tr>
+
+								{% for data in orders_data %}
+								<tr class="table_row">
+
+
+
+									<td class="column-1">{{ data.pid }}</td>
+									<td class="column-2">
+										<img src="{{ data.pid.product_image1.url }}" width='100px'>
+
+									</td>
+									<td class="column-3">$.{{ data.price  }}</td>
+									<td class="column-4">{{ data.qty }}</td>
+									<td class="column-5">$.{{ data.total_cost }}</td>
+<!--									<td class="column-4">-->
+<!--										<div class="how-itemcart1">-->
+<!--&lt;!&ndash;											<div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">&ndash;&gt;-->
+<!--&lt;!&ndash;												<i class="fs-16 zmdi zmdi-minus"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;											</div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;											<input class="mtext-104 cl3 txt-center num-product" type="number" name="num-product1" value="1">&ndash;&gt;-->
+
+<!--&lt;!&ndash;											<div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">&ndash;&gt;-->
+<!--&lt;!&ndash;												<i class="fs-16 zmdi zmdi-plus"></i>&ndash;&gt;-->
+<!--&lt;!&ndash;											</div>&ndash;&gt;-->
+<!--											{{ data.order_status }}-->
+<!--										</div>-->
+<!--									 </td>-->
+<!--									 <td class="column-5">cartdata.price</td>-->
+
+								</tr>
+								  {% endfor %}
+
+							</table>
+							{% else %}
+
+                          <h3> No Items present in the cart</h3>
+
+                          {% endif %}
+						</div>
+
+						<div class="flex-w flex-sb-m bor15 p-t-18 p-b-15 p-lr-40 p-lr-15-sm">
+<!--							<div class="flex-w flex-m m-r-20 m-tb-5">-->
+<!--								<input class="stext-104 cl2 plh4 size-117 bor13 p-lr-20 m-r-10 m-tb-5" type="text" name="coupon" placeholder="Coupon Code">-->
+
+<!--								<div class="flex-c-m stext-101 cl2 size-118 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-5">-->
+<!--									Apply coupon-->
+<!--								</div>-->
+<!--							</div>-->
+
+<!--							<div class="flex-c-m stext-101 cl2 size-119 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-10">-->
+<!--								Update Cart-->
+<!--							</div>-->
+						</div>
+					</div>
+
+				</div>
+
+
+
+
+
+<!--						<a href="{% url 'checkout' %}" class="primary-btn">Proceed to checkout</a>-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+
+{% endblock %}

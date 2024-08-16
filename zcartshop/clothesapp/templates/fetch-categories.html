@@ -1,0 +1,5 @@
+{% if categories %}
+{% for category in categories %}
+  <li><a href="{% url 'product' category.id %}">{{ category }}</a></li>
+{% endfor %}
+{% endif %}
