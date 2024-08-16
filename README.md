@@ -1,6 +1,28 @@
 # zcartshop-project
 This Repository contains the code and project files for shopping website project. This was developed in September 2023 
 
+# About Project
+Z-CART SHOP	July ,2023 – August ,2023
+●	Online ecommerce shopping website made using Python Programming Language with MySQL Database and MVC Framework or architecture. Providing a wide range of fashion products to choose from.
+
+# Some of the functionalities are mentioned as below:
+o	Search, Browse and Filter from different product categories
+o	Adding to cart, checkout, placing an order
+o	Track orders
+o	Automatic e-mail triggering for order placement and tracking
+o	User Sign up and User Sign in
+o	Admin Creation and Admin Login
+o	Admin Tasks - Add new products, users, remove products, maintain product categories
+o	Weather and Temperature Display onto screen
+
+# Technology Used:
+•	Front-End: HTML, CSS, JavaScript, JQuery, BootStrap
+•	Back-End: Python, SQL, Django, MVC Framework
+•	APIs Used: Microsoft Outlook Email API, Django Core Email SMTP Backend, Open Weather API
+•	Database: Apache MySQL, local-host
+•	Browser: Google Chrome, Microsoft Edge
+
+
 # Output 
 
 ![p1](https://github.com/user-attachments/assets/233b27fe-1d3b-47a9-af51-b4dd0e572ac3)
